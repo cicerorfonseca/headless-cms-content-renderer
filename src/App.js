@@ -1,14 +1,31 @@
-import { useEffect } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { React, useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect,
+} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import * as actions from './store/actions';
 
 import './App.css';
 
+// Routes
+import Books from './components/pages/Books';
+import Bios from './components/pages/Bios';
+import Maintenance from './components/pages/Maintenance';
+
+// Components
 import Navigation from './components/Navigation';
 
-const URL_ROUTES = 'https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/routes.json';
+const routesRegistry = {
+  'Books': Books,
+  'Bios': Bios,
+};
+
+const URL_ROUTES =
+  'https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/routes.json';
 
 function App() {
   const counter = useSelector((state) => state);
@@ -19,24 +36,39 @@ function App() {
   }, []);
 
   const fetchRoutes = () => {
-    axios.get(URL_ROUTES)
-    .then((res) => {
-      dispatch(actions.setRoutes(res.data));
-    })
-    .catch((err) => {
-      console.log(err.message);
-    })
-  }
+    axios
+      .get(URL_ROUTES)
+      .then((res) => {
+        dispatch(actions.setRoutes(res.data));
+      })
+      .catch((err) => {
+        dispatch(actions.setRoutesError());
+        console.log(err.message);
+      });
+  };
 
   return (
-    <div className="App">
+    <div className='App'>
       <Router>
-        <header className="header">
+        <header className='header'>
           <Link to='/'>
             <h1>Headless CMS Content Renderer</h1>
           </Link>
           <Navigation />
         </header>
+        {Object.entries(counter.routes).map((route, index) => {
+          return (
+            <Route
+              exact
+              path={route[0]}
+              component={routesRegistry[route[1]]}
+              key={index}
+            />
+          );
+        })}
+        <Route exact path='/maintenance' component={Maintenance} />
+
+        {/* TODO: Validate if the current route is valid, otherwise, redirect the user to /books */}
       </Router>
     </div>
   );
