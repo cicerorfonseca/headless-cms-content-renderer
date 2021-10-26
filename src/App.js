@@ -4,6 +4,7 @@ import {
   Route,
   Link,
   Redirect,
+  Switch,
 } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
@@ -47,6 +48,13 @@ function App() {
       });
   };
 
+  const validRoutes = Object.entries(counter.routes).map((key, value) => {
+    let path = key[0];
+    let component = key[1];
+
+    return { path, component };
+  });
+
   return (
     <div className='App'>
       <Router>
@@ -56,17 +64,20 @@ function App() {
           </Link>
           <Navigation />
         </header>
-        {Object.entries(counter.routes).map((route, index) => {
-          return (
-            <Route
-              exact
-              path={route[0]}
-              component={routesRegistry[route[1]]}
-              key={index}
-            />
-          );
-        })}
-        <Route exact path='/maintenance' component={Maintenance} />
+        <Switch>
+          {validRoutes.map((route, index) => {
+            return (
+              <Route
+                exact
+                path={route.path}
+                component={routesRegistry[route.component]}
+                key={index}
+              />
+            );
+          })}
+          <Route exact path='/maintenance' component={Maintenance} />
+          <Route path='/' component={Books} />
+        </Switch>
 
         {/* TODO: Validate if the current route is valid, otherwise, redirect the user to /books */}
       </Router>

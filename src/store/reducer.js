@@ -3,7 +3,7 @@ import * as actions from './actionTypes';
 const initialState = {
   loading: false,
   routesError: false,
-  routes: [],
+  routes: {},
 };
 
 export default function reducer(state = initialState, action) {
