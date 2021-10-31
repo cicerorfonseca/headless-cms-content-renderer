@@ -5,7 +5,7 @@ export const setRoutes = (routes) => ({
   payload: { routes },
 });
 
-export const setRoutesError = () => ({
-  type: actions.SET_ROUTES_ERROR,
+export const setRequestError = () => ({
+  type: actions.SET_REQUEST_ERROR,
   payload: true,
 });

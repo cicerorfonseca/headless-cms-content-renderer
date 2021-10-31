@@ -1,2 +1,2 @@
 export const SET_ROUTES = 'SET_ROUTES';
-export const SET_ROUTES_ERROR = 'SET_ROUTES_ERROR';
+export const SET_REQUEST_ERROR = 'SET_REQUEST_ERROR';

@@ -2,16 +2,16 @@ import * as actions from './actionTypes';
 
 const initialState = {
   loading: false,
-  routesError: false,
+  requestError: false,
   routes: {},
 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case actions.SET_ROUTES_ERROR:
+    case actions.SET_REQUEST_ERROR:
       return {
         ...state,
-        routesError: action.payload,
+        requestError: action.payload,
       };
     case actions.SET_ROUTES:
       return {
