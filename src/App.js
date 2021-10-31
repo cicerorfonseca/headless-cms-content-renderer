@@ -9,18 +9,14 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import * as actions from './store/actions';
-
 import './App.css';
 
-// Statis Routes
 import Maintenance from './components/Maintenance';
-
-// Components
 import Navigation from './components/Navigation';
 import Component from './components/Component';
 
 const URL =
-  'https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main';
+  'https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/content';
 
 function App() {
   const counter = useSelector((state) => state);
@@ -42,18 +38,25 @@ function App() {
       });
   };
 
-  // Make an array from valid routes object
-  const validRoutes = Object.entries(counter.routes).map((key, value) => {
-    let path = key[0];
-    let component = key[1];
-
-    return { path, component };
+  const routesRenderer = Object.entries(counter.routes).map((key, index) => {
+    return (
+      <Route
+        path={key[0]}
+        render={(props) => (
+          <Component {...props} content={key[0]} component={key[1]} url={URL} />
+        )}
+        key={index}
+      />
+    );
   });
 
   // Map first valid route to the proper component
   const mainRoute = () => {
-    for (let i = 0; i < validRoutes.length; i++) {
-      return <Redirect to={validRoutes[i].path} />;
+    for (const route in counter.routes) {
+      if (Object.hasOwnProperty.call(counter.routes, route)) {
+        return <Redirect to={route} />;
+        break;
+      }
     }
   };
 
@@ -67,25 +70,15 @@ function App() {
           <Navigation routes={counter.routes} />
         </header>
         <Switch>
-          {/* Render routes from valid routes and map them to the proper component */}
-          {validRoutes.map((route, index) => {
-            return (
-              <Route
-                path={route.path}
-                render={(props) => (
-                  <Component {...props} component={route.component} url={URL} />
-                )}
-                key={index}
-              />
-            );
-          })}
+          {routesRenderer}
 
-          {/* In case of route request error redirect the user */}
-          <Route exact path='/maintenance' component={Maintenance} />
           {counter.requestError && (
-            <Route path='/'>
-              <Redirect to='/maintenance' />
-            </Route>
+            <>
+              <Route exact path='/maintenance' component={Maintenance} />
+              <Route path='/'>
+                <Redirect to='/maintenance' />
+              </Route>
+            </>
           )}
 
           {/* If the request is valid and route invalid, redirect to the first route available */}
