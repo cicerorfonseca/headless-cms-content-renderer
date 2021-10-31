@@ -12,22 +12,15 @@ import * as actions from './store/actions';
 
 import './App.css';
 
-// Routes
-import Books from './components/pages/Books';
-import Bios from './components/pages/Bios';
-import Maintenance from './components/pages/Maintenance';
+// Statis Routes
+import Maintenance from './components/Maintenance';
 
 // Components
 import Navigation from './components/Navigation';
+import Component from './components/Component';
 
-// Component mapping
-const routesRegistry = {
-  'Books': Books,
-  'Bios': Bios,
-};
-
-const URL_ROUTES =
-  'https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/routes.json';
+const URL =
+  'https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main';
 
 function App() {
   const counter = useSelector((state) => state);
@@ -39,7 +32,7 @@ function App() {
 
   const fetchRoutes = () => {
     axios
-      .get(URL_ROUTES)
+      .get(`${URL}/routes.json`)
       .then((res) => {
         dispatch(actions.setRoutes(res.data));
       })
@@ -73,21 +66,22 @@ function App() {
           </Link>
           <Navigation routes={counter.routes} />
         </header>
-
         <Switch>
           {/* Render routes from valid routes and map them to the proper component */}
           {validRoutes.map((route, index) => {
             return (
               <Route
-                exact
                 path={route.path}
-                component={routesRegistry[route.component]}
+                render={(props) => (
+                  <Component {...props} component={route.component} url={URL} />
+                )}
                 key={index}
               />
             );
           })}
-          <Route exact path='/maintenance' component={Maintenance} />
+
           {/* In case of route request error redirect the user */}
+          <Route exact path='/maintenance' component={Maintenance} />
           {counter.requestError && (
             <Route path='/'>
               <Redirect to='/maintenance' />
