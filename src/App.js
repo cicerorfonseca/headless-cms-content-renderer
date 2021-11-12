@@ -10,10 +10,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import * as actions from './store/actions';
 import './App.css';
-
 import Maintenance from './components/Maintenance';
 import Navigation from './components/Navigation';
-import Component from './components/Component';
+import Page from './components/Page';
 
 const URL =
   'https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/content';
@@ -43,7 +42,12 @@ function App() {
       <Route
         path={key[0]}
         render={(props) => (
-          <Component {...props} content={key[0]} component={key[1]} url={URL} />
+          <Page
+            {...props}
+            componentContent={key[0]}
+            componentName={key[1]}
+            componentUrl={URL}
+          />
         )}
         key={index}
       />
