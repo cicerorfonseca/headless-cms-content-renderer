@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Container from './types/Container';
 import RichText from './types/RichText';
+import Image from './types/Image';
 
 const ComponentsMap = {
   'rich-text': RichText,
   'container': Container,
+  'image': Image,
 };
 
 const Components = ({ content }) => {
