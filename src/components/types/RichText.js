@@ -20,11 +20,6 @@ const RichText = (props) => {
 
 RichText.propTypes = {
   component: PropTypes.object,
-  classname: PropTypes.string,
-  style: PropTypes.string,
-  text: PropTypes.string,
-  textType: PropTypes.string,
-  type: PropTypes.string,
 };
 
 export default RichText;
