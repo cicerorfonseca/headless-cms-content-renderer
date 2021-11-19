@@ -1,0 +1,215 @@
+[
+  {
+    "type": "rich-text",
+    "textType": "html",
+    "style": "uppercase",
+    "className": "title",
+    "text": "<h1>Stormlight Archive Lore</h1>"
+  },
+  {
+    "type": "container",
+    "flexDirection": "column",
+    "items": [
+      {
+        "type": "rich-text",
+        "textType": "html",
+        "text": "<h2>Orders of the Knights Radiant</h2>"
+      },
+      {
+        "type": "rich-text",
+        "textType": "plain",
+        "text": "The Radiants were divided into ten orders, each of which directly corresponds with one of the Heralds. Each order had two Surges associated with it, and each Surge was used by two different orders. The Knights Radiant used Shardblades and Shardplate, which were etched with glyphs and glowed a different color according to the order of which they were a member. Each Radiant was bonded to a spren, and that spren determined the powers and order to which the Radiant belonged."
+      },
+      {
+        "type": "container",
+        "flexWrap": "wrap",
+        "flexDirection": "row",
+        "className": "order-list",
+        "justifyContent": "space-around",
+        "width": 1,
+        "items": [
+          {
+            "type": "container",
+            "flexDirection": "column",
+            "width": 0.3,
+            "className": "order-element",
+            "items": [
+              {
+                "type": "rich-text",
+                "textType": "html",
+                "text": "<h3>Windrunners</h3>"
+              },
+              {
+                "type": "image",
+                "alt": "windrunner symbol",
+                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/windrunner.png"
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "flexDirection": "column",
+            "width": 0.3,
+            "className": "order-element",
+            "items": [
+              {
+                "type": "rich-text",
+                "textType": "html",
+                "text": "<h3>Bondsmiths</h3>"
+              },
+              {
+                "type": "image",
+                "alt": "bondsmith symbol",
+                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/bondsmith.png"
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "flexDirection": "column",
+            "width": 0.3,
+            "className": "order-element",
+            "items": [
+              {
+                "type": "rich-text",
+                "textType": "html",
+                "text": "<h3>Dustbringers</h3>"
+              },
+              {
+                "type": "image",
+                "alt": "dustbringer symbol",
+                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/dustbringer.png"
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "flexDirection": "column",
+            "width": 0.3,
+            "className": "order-element",
+            "items": [
+              {
+                "type": "rich-text",
+                "textType": "html",
+                "text": "<h3>Edgedancers</h3>"
+              },
+              {
+                "type": "image",
+                "alt": "edgedancer symbol",
+                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/edgedancer.png"
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "flexDirection": "column",
+            "width": 0.3,
+            "className": "order-element",
+            "items": [
+              {
+                "type": "rich-text",
+                "textType": "html",
+                "text": "<h3>Elsecallers</h3>"
+              },
+              {
+                "type": "image",
+                "alt": "elsecaller symbol",
+                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/elsecaller.png"
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "flexDirection": "column",
+            "width": 0.3,
+            "className": "order-element",
+            "items": [
+              {
+                "type": "rich-text",
+                "textType": "html",
+                "text": "<h3>Lightweavers</h3>"
+              },
+              {
+                "type": "image",
+                "alt": "lightweaver symbol",
+                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/lightweaver.png"
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "flexDirection": "column",
+            "width": 0.3,
+            "className": "order-element",
+            "items": [
+              {
+                "type": "rich-text",
+                "textType": "html",
+                "text": "<h3>Skybreakers</h3>"
+              },
+              {
+                "type": "image",
+                "alt": "skybreaker symbol",
+                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/skybreaker.png"
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "flexDirection": "column",
+            "width": 0.3,
+            "className": "order-element",
+            "items": [
+              {
+                "type": "rich-text",
+                "textType": "html",
+                "text": "<h3>Stonewards</h3>"
+              },
+              {
+                "type": "image",
+                "alt": "stoneward symbol",
+                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/stoneward.png"
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "flexDirection": "column",
+            "width": 0.3,
+            "className": "order-element",
+            "items": [
+              {
+                "type": "rich-text",
+                "textType": "html",
+                "text": "<h3>Truthwatchers</h3>"
+              },
+              {
+                "type": "image",
+                "alt": "truthwatcher symbol",
+                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/truthwatcher.png"
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "flexDirection": "column",
+            "width": 0.3,
+            "className": "order-element",
+            "items": [
+              {
+                "type": "rich-text",
+                "textType": "html",
+                "text": "<h3>Willshapers</h3>"
+              },
+              {
+                "type": "image",
+                "alt": "willshaper symbol",
+                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/willshaper.png"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
