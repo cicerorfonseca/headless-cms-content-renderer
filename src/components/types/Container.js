@@ -1,22 +1,49 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import RichText from './RichText';
 import Components from '../Components';
+import { device } from '../../devices';
 
 const RICH_TEXT_TYPE = 'rich-text';
 
+const Content = styled.div`
+  display: flex;
+  flex-direction: ${(props) => props.flexDirection};
+  flex-wrap: ${(props) => props.flexWrap};
+  justify-content: ${(props) => props.justifyContent};
+  align-items: ${(props) => props.alignItems};
+  width: ${(props) => props.width};
+
+  @media ${device.tablet} {
+    flex-direction: ${(props) => props.flexDirectionTablet};
+  }
+`;
+
 const Container = (props) => {
   const {
-    component: { className, flexDirection, items },
+    component: {
+      className,
+      flexDirection,
+      flexDirectionTablet,
+      flexWrap,
+      justifyContent,
+      alignItems,
+      width,
+      items,
+    },
   } = props;
 
-  const containerStyles = {
-    display: flexDirection ? 'flex' : 'block',
-    flexDirection: flexDirection,
-  };
-
   return (
-    <div className={className} style={containerStyles}>
+    <Content
+      className={className}
+      flexDirection={flexDirection}
+      flexDirectionTablet={flexDirectionTablet}
+      flexWrap={flexWrap}
+      justifyContent={justifyContent}
+      alignItems={alignItems}
+      width={width}
+    >
       {items.map((item, index) => {
         if (item.type === RICH_TEXT_TYPE) {
           return <RichText key={index} component={item} />;
@@ -24,7 +51,7 @@ const Container = (props) => {
           return <Components key={index} content={item} />;
         }
       })}
-    </div>
+    </Content>
   );
 };
 

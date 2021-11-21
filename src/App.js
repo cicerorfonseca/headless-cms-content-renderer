@@ -14,8 +14,10 @@ import Maintenance from './components/Maintenance';
 import Navigation from './components/Navigation';
 import Page from './components/Page';
 
-const URL =
-  'https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/content';
+// Temporary URL
+// const URL =
+//   'https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/content';
+const URL = '../../../content';
 
 function App() {
   const counter = useSelector((state) => state);
@@ -68,9 +70,7 @@ function App() {
     <div className='App'>
       <Router>
         <header className='header'>
-          <Link to='/'>
-            <h1>Headless CMS Content Renderer</h1>
-          </Link>
+          {/* <Logo /> */}
           <Navigation routes={counter.routes} />
         </header>
         <Switch>

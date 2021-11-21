@@ -4,7 +4,7 @@
     "textType": "html",
     "style": "uppercase",
     "className": "title",
-    "text": "<h1>Stormlight Archive Books</h1>"
+    "text": "<h1>New Releases</h1>"
   },
   {
     "type": "container",
@@ -15,7 +15,7 @@
         "type": "rich-text",
         "textType": "plain",
         "className": "series-summary",
-        "text": "There are currently four books released in the Stormlight Archive series out of ten planned books."
+        "text": "There are last four Stephen King's books released in the New Horror series out of ten planned books."
       },
       {
         "type": "container",
@@ -23,14 +23,14 @@
         "flexDirectionTablet": "row",
         "className": "book-list",
         "justifyContent": "flex-start",
-        "backgroundImg": "https://images-na.ssl-images-amazon.com/images/I/91KzZWpgmyL.jpg",
+        "backgroundImg": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/billy-summers.png",
         "items": [
           {
             "type": "image",
-            "alt": "Way of Kings book cover",
+            "alt": "Billy Summers book cover",
             "className": "book-cover",
             "height": 200,
-            "src": "https://images-na.ssl-images-amazon.com/images/I/91KzZWpgmyL.jpg"
+            "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/billy-summers.png"
           },
           {
             "type": "container",
@@ -49,7 +49,7 @@
                 "type": "rich-text",
                 "textType": "plain",
                 "className": "book-summary",
-                "text": "The Way of Kings is an epic fantasy novel written by American author Brandon Sanderson and the first book in The Stormlight Archive series. The novel was published on August 31, 2010, by Tor Books. The Way of Kings consists of one prelude, one prologue, 75 chapters, an epilogue and 9 interludes."
+                "text": "From legendary storyteller and #1 bestseller Stephen King, whose “restless imagination is a power that cannot be contained” (The New York Times Book Review), comes a thrilling new novel about a good guy in a bad job."
               }
             ]
           }
@@ -61,14 +61,14 @@
         "flexDirectionTablet": "row",
         "className": "book-list",
         "justifyContent": "flex-start",
-        "backgroundImg": "https://images-na.ssl-images-amazon.com/images/I/91KzZWpgmyL.jpg",
+        "backgroundImg": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/elevation.png",
         "items": [
           {
             "type": "image",
-            "alt": "Words of Radiance book cover",
+            "alt": "Elevation book cover",
             "className": "book-cover",
             "height": 200,
-            "src": "https://images-na.ssl-images-amazon.com/images/I/91tECQfrZTL.jpg"
+            "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/elevation.png"
           },
           {
             "type": "container",
@@ -81,13 +81,13 @@
                 "type": "rich-text",
                 "textType": "plain",
                 "className": "book-title",
-                "text": "Words of Radiance"
+                "text": "Elevation"
               },
               {
                 "type": "rich-text",
                 "textType": "plain",
                 "className": "book-summary",
-                "text": "Words of Radiance is an epic fantasy novel written by American author Brandon Sanderson and the second book in The Stormlight Archive series. The novel was published on March 4, 2014, by Tor Books. Words of Radiance consists of one prologue, 89 chapters, an epilogue and 14 interludes."
+                "text": "The latest from legendary master storyteller Stephen King, a riveting, extraordinarily eerie, and moving story about a man whose mysterious affliction brings a small town together—a timely, upbeat tale about finding common ground despite deep-rooted differences."
               }
             ]
           }
@@ -99,14 +99,14 @@
         "flexDirectionTablet": "row",
         "className": "book-list",
         "justifyContent": "flex-start",
-        "backgroundImg": "https://images-na.ssl-images-amazon.com/images/I/91KzZWpgmyL.jpg",
+        "backgroundImg": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/the-institute.png",
         "items": [
           {
             "type": "image",
-            "alt": "Oathbringer book cover",
+            "alt": "The Institute book cover",
             "className": "book-cover",
             "height": 200,
-            "src": "https://images-na.ssl-images-amazon.com/images/I/91x4fchgt2L.jpg"
+            "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/the-institute.png"
           },
           {
             "type": "container",
@@ -119,13 +119,13 @@
                 "type": "rich-text",
                 "textType": "plain",
                 "className": "book-title",
-                "text": "Oathbringer"
+                "text": "The Institute"
               },
               {
                 "type": "rich-text",
                 "textType": "plain",
                 "className": "book-summary",
-                "text": "Nestled in the mountains high above the storms, in the tower city of Urithiru, Shallan Davar investigates the wonders of the ancient stronghold of the Knights Radiant and unearths dark secrets lurking in its depths. And Dalinar realizes that his holy mission to unite his homeland of Alethkar was too narrow in scope."
+                "text": "In the middle of the night, in a house on a quiet street in suburban Minneapolis, intruders silently murder Luke Ellis’s parents and load him into a black SUV. The operation takes less than two minutes. Luke will wake up at The Institute, in a room that looks just like his own, except there’s no window.”"
               }
             ]
           }
@@ -137,14 +137,14 @@
         "flexDirectionTablet": "row",
         "className": "book-list",
         "justifyContent": "flex-start",
-        "backgroundImg": "https://images-na.ssl-images-amazon.com/images/I/91KzZWpgmyL.jpg",
+        "backgroundImg": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/if-it-bleeds.png",
         "items": [
           {
             "type": "image",
-            "alt": "Rhythm of War book cover",
+            "alt": "If It Bleeds book cover",
             "className": "book-cover",
             "height": 200,
-            "src": "https://images-na.ssl-images-amazon.com/images/I/51mXkL4fXeL.jpg"
+            "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/if-it-bleeds.png"
           },
           {
             "type": "container",
@@ -157,13 +157,13 @@
                 "type": "rich-text",
                 "textType": "plain",
                 "className": "book-title",
-                "text": "Rhythm of War"
+                "text": "If It Bleeds"
               },
               {
                 "type": "rich-text",
                 "textType": "plain",
                 "className": "book-summary",
-                "text": "The book is set on Roshar one year after the Battle of Thaylen Field and follows the stories of Shallan Davar, Kaladin, Venli, and Navani Kholin. There are also several other characters who receive viewpoints; Adolin Kholin, Lirin, Dalinar Kholin, Renarin Kholin, Jasnah Kholin, Rlain, Dabbid, Teft, Moash, Adin, Taravangian, Lezian, and Wit in the main text, Venli and Eshonai in flashbacks, and several others in the Interludes."
+                "text": "The novella is a form King has returned to over and over again in the course of his amazing career, and many have been made into iconic films, including “The Body” (Stand By Me) and “Rita Hayworth and Shawshank Redemption” (Shawshank Redemption). Like Four Past Midnight, Different Seasons, and most recently Full Dark, No Stars, If It Bleeds is a uniquely satisfying collection of longer short fiction by an incomparably gifted writer."
               }
             ]
           }

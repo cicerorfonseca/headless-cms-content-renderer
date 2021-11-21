@@ -25,11 +25,10 @@ const Page = ({ componentContent, componentName, componentUrl }) => {
       });
   };
 
-  console.log(content);
+  // TODO: set component name as page title
 
   return (
     <div className={`${componentName.toLowerCase()}-wrapper container`}>
-      <h1>{componentName}</h1>
       {content &&
         content.map((block, index) => {
           return <Components key={index} content={block} />;

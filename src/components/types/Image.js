@@ -1,20 +1,31 @@
-import React, { Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 const Image = (props) => {
-  console.log(props);
+  const [error, setError] = useState(false);
 
   const {
     component: { alt, className, height, src },
   } = props;
 
-  const imageStyles = {
-    height: height,
+  const styles = {
+    maxHeight: height,
+    alignSelf: 'center',
+  };
+
+  const handleError = () => {
+    setError(true);
   };
 
   return (
     <Fragment>
-      <img className={className} src={src} alt={alt} style={imageStyles} />
+      <img
+        onError={handleError}
+        className={className}
+        src={error ? `https://via.placeholder.com/100` : src}
+        alt={alt}
+        style={styles}
+      />
     </Fragment>
   );
 };

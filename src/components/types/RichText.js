@@ -7,6 +7,10 @@ const RichText = (props) => {
     component: { classname, style, text, textType, type },
   } = props;
 
+  const styles = {
+    textTransform: style,
+  };
+
   const richTextRenderer = () => {
     if (textType === 'html') {
       return <Fragment>{parse(text)}</Fragment>;
@@ -15,7 +19,11 @@ const RichText = (props) => {
     }
   };
 
-  return <div className={classname}>{richTextRenderer()}</div>;
+  return (
+    <div className={classname} style={styles}>
+      {richTextRenderer()}
+    </div>
+  );
 };
 
 RichText.propTypes = {
