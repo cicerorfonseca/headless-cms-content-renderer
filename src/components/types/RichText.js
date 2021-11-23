@@ -4,26 +4,28 @@ import parse from 'html-react-parser';
 
 const RichText = (props) => {
   const {
-    component: { classname, style, text, textType, type },
+    component: { className, style, text, textType, type },
   } = props;
 
   const styles = {
     textTransform: style,
   };
 
+  console.log(props);
+
   const richTextRenderer = () => {
     if (textType === 'html') {
-      return <Fragment>{parse(text)}</Fragment>;
+      return parse(text);
     } else if (textType === 'plain') {
-      return <p>{text}</p>;
+      return (
+        <p className={className} style={style}>
+          {text}
+        </p>
+      );
     }
   };
 
-  return (
-    <div className={classname} style={styles}>
-      {richTextRenderer()}
-    </div>
-  );
+  return <Fragment>{richTextRenderer()}</Fragment>;
 };
 
 RichText.propTypes = {

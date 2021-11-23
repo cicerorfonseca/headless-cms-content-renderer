@@ -1,17 +1,17 @@
 import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Content = styled.img`
+  max-height: ${(props) => props.height}px;
+  align-self: center;
+`;
 
 const Image = (props) => {
   const [error, setError] = useState(false);
-
   const {
     component: { alt, className, height, src },
   } = props;
-
-  const styles = {
-    maxHeight: height,
-    alignSelf: 'center',
-  };
 
   const handleError = () => {
     setError(true);
@@ -19,12 +19,12 @@ const Image = (props) => {
 
   return (
     <Fragment>
-      <img
+      <Content
         onError={handleError}
         className={className}
         src={error ? `https://via.placeholder.com/100` : src}
         alt={alt}
-        style={styles}
+        height={height}
       />
     </Fragment>
   );

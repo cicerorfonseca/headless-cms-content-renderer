@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200;400;700&display=swap');
+
+:root {
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+  --brand-neutral-grey: #cbcfd1;
+  --brand-blue-dark: #262231;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Spectral', serif;
+  background-color: var(--brand-white);
+  color: var(--brand-blue-dark);
+}
+
+.App {
+  padding: 1rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(206, 206, 206);
+
+  .logo {
+    img {
+      max-height: 55px;
+    }
+  }
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  li {
+    list-style: none;
+
+    a {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+}
+
+a {
+  color: var(--brand-white);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--brand-white);
+    text-decoration: underline;
+  }
+}
+
+nav {
+  display: grid;
+  padding: 1rem;
+  grid-template-rows: auto 1fr;
+  background-color: var(--brand-black);
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease;
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgb(206, 206, 206);
+  }
+}
+
+.hamburger,
+.close {
+  font-size: 2rem;
+  color: var(--brand-blue-dark);
+  text-align: right;
+}
+
+.series-summary {
+  margin-bottom: 1rem;
+}
+
+.book-list {
+  // background-color: var(--brand-neutral-grey);
+  background-image: linear-gradient(
+    0deg,
+    var(--brand-neutral-grey),
+    var(--brand-white)
+  );
+  padding: 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.book-detail {
+  margin-top: 1rem;
+
+  div {
+    &:first-of-type {
+      p {
+        font-weight: bold;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .order-element {
+    flex: 0 0 50%;
+  }
+}

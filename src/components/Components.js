@@ -14,7 +14,6 @@ const Components = ({ content }) => {
   const { type } = content;
 
   if (typeof ComponentsMap[type] !== 'undefined') {
-    console.log(content);
     return React.createElement(ComponentsMap[type], {
       component: content,
     });

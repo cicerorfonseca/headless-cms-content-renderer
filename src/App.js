@@ -9,9 +9,10 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import * as actions from './store/actions';
-import './App.css';
+import './App.scss';
 import Maintenance from './components/Maintenance';
 import Navigation from './components/Navigation';
+import Logo from './components/Logo';
 import Page from './components/Page';
 
 // Temporary URL
@@ -70,7 +71,7 @@ function App() {
     <div className='App'>
       <Router>
         <header className='header'>
-          {/* <Logo /> */}
+          <Logo />
           <Navigation routes={counter.routes} />
         </header>
         <Switch>

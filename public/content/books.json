@@ -23,7 +23,6 @@
         "flexDirectionTablet": "row",
         "className": "book-list",
         "justifyContent": "flex-start",
-        "backgroundImg": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/billy-summers.png",
         "items": [
           {
             "type": "image",
@@ -61,7 +60,6 @@
         "flexDirectionTablet": "row",
         "className": "book-list",
         "justifyContent": "flex-start",
-        "backgroundImg": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/elevation.png",
         "items": [
           {
             "type": "image",
@@ -99,7 +97,6 @@
         "flexDirectionTablet": "row",
         "className": "book-list",
         "justifyContent": "flex-start",
-        "backgroundImg": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/the-institute.png",
         "items": [
           {
             "type": "image",
@@ -137,7 +134,6 @@
         "flexDirectionTablet": "row",
         "className": "book-list",
         "justifyContent": "flex-start",
-        "backgroundImg": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/if-it-bleeds.png",
         "items": [
           {
             "type": "image",
