@@ -14,6 +14,7 @@ import Maintenance from './components/Maintenance';
 import Navigation from './components/Navigation';
 import Logo from './components/Logo';
 import Page from './components/Page';
+import Footer from './components/Footer';
 
 // Temporary URL
 // const URL =
@@ -89,6 +90,9 @@ function App() {
           {/* If the request is valid and route invalid, redirect to the first route available */}
           {mainRoute()}
         </Switch>
+        <footer>
+          <Footer />
+        </footer>
       </Router>
     </div>
   );

@@ -4,7 +4,7 @@
     "textType": "html",
     "style": "uppercase",
     "className": "title",
-    "text": "<h1>Stormlight Archive Lore</h1>"
+    "text": "<h1>Stephen King - Gunslinger Archive Lore</h1>"
   },
   {
     "type": "container",
@@ -42,7 +42,7 @@
               {
                 "type": "image",
                 "alt": "windrunner symbol",
-                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/windrunner.png"
+                "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/book-placeholder.png"
               }
             ]
           },
@@ -60,7 +60,7 @@
               {
                 "type": "image",
                 "alt": "bondsmith symbol",
-                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/bondsmith.png"
+                "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/book-placeholder.png"
               }
             ]
           },
@@ -78,7 +78,7 @@
               {
                 "type": "image",
                 "alt": "dustbringer symbol",
-                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/dustbringer.png"
+                "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/book-placeholder.png"
               }
             ]
           },
@@ -96,7 +96,7 @@
               {
                 "type": "image",
                 "alt": "edgedancer symbol",
-                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/edgedancer.png"
+                "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/book-placeholder.png"
               }
             ]
           },
@@ -114,7 +114,7 @@
               {
                 "type": "image",
                 "alt": "elsecaller symbol",
-                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/elsecaller.png"
+                "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/book-placeholder.png"
               }
             ]
           },
@@ -132,7 +132,7 @@
               {
                 "type": "image",
                 "alt": "lightweaver symbol",
-                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/lightweaver.png"
+                "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/book-placeholder.png"
               }
             ]
           },
@@ -150,7 +150,7 @@
               {
                 "type": "image",
                 "alt": "skybreaker symbol",
-                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/skybreaker.png"
+                "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/book-placeholder.png"
               }
             ]
           },
@@ -168,7 +168,7 @@
               {
                 "type": "image",
                 "alt": "stoneward symbol",
-                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/stoneward.png"
+                "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/book-placeholder.png"
               }
             ]
           },
@@ -186,7 +186,7 @@
               {
                 "type": "image",
                 "alt": "truthwatcher symbol",
-                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/truthwatcher.png"
+                "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/book-placeholder.png"
               }
             ]
           },
@@ -204,7 +204,7 @@
               {
                 "type": "image",
                 "alt": "willshaper symbol",
-                "src": "https://raw.githubusercontent.com/Bounteous-Inc/headless-cms-assessment/main/img/willshaper.png"
+                "src": "https://raw.githubusercontent.com/cicerorfonseca/headless-cms-content-renderer/main/public/content/imgs/book-placeholder.png"
               }
             ]
           }

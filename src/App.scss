@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200;400;700&display=swap');
 
 :root {
-  --brand-black: #000000;
-  --brand-white: #ffffff;
-  --brand-neutral-grey: #cbcfd1;
-  --brand-blue-dark: #262231;
+  --black: #000000;
+  --white: #ffffff;
+  --neutral-grey: #cbcfd1;
+  --neutral-grey-dark: #3d3d3d;
 }
 
 * {
@@ -24,8 +24,8 @@ html {
 
 body {
   font-family: 'Spectral', serif;
-  background-color: var(--brand-white);
-  color: var(--brand-blue-dark);
+  background-color: var(--white);
+  color: var(--neutral-grey-dark);
 }
 
 .App {
@@ -62,11 +62,11 @@ ul {
 }
 
 a {
-  color: var(--brand-white);
+  color: var(--neutral-grey-dark);
   text-decoration: none;
 
   &:hover {
-    color: var(--brand-white);
+    color: var(--white);
     text-decoration: underline;
   }
 }
@@ -75,7 +75,7 @@ nav {
   display: grid;
   padding: 1rem;
   grid-template-rows: auto 1fr;
-  background-color: var(--brand-black);
+  background-color: var(--white);
   position: absolute;
   z-index: 1000;
   top: 0;
@@ -87,7 +87,7 @@ nav {
   transition: transform 0.2s ease;
 
   &.active {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   .navbar-top {
@@ -102,7 +102,7 @@ nav {
 .hamburger,
 .close {
   font-size: 2rem;
-  color: var(--brand-blue-dark);
+  color: var(--neutral-grey-dark);
   text-align: right;
 }
 
@@ -111,12 +111,7 @@ nav {
 }
 
 .book-list {
-  // background-color: var(--brand-neutral-grey);
-  background-image: linear-gradient(
-    0deg,
-    var(--brand-neutral-grey),
-    var(--brand-white)
-  );
+  background-image: linear-gradient(0deg, var(--neutral-grey), var(--white));
   padding: 2rem;
 
   &:not(:last-child) {
@@ -127,18 +122,72 @@ nav {
 .book-detail {
   margin-top: 1rem;
 
-  div {
-    &:first-of-type {
-      p {
-        font-weight: bold;
-        font-size: 2rem;
-      }
-    }
+  .book-title {
+    font-weight: bold;
+    font-size: 2rem;
   }
+}
+
+footer {
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid rgb(206, 206, 206);
 }
 
 @media screen and (max-width: 600px) {
   .order-element {
     flex: 0 0 50%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .App {
+    padding: 2rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    transform: translateY(0);
+    height: auto;
+    width: auto;
+    position: relative;
+
+    .navbar-top {
+      display: none;
+    }
+
+    ul {
+      flex-direction: row;
+      justify-content: flex-end;
+
+      li {
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+      }
+
+      a {
+        font-size: 1.5rem;
+
+        &:hover {
+          color: var(--neutral-grey-dark);
+        }
+      }
+    }
+  }
+
+  .book-detail {
+    margin: 0 1rem 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .App {
+    max-width: 1024px;
+    margin: auto;
   }
 }

@@ -5,7 +5,7 @@
 
 const size = {
   mobile: '320px',
-  tablet: '768px',
+  tablet: '600px',
   desktop: '1024px',
   desktopL: '1200px',
 };
