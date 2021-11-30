@@ -13,27 +13,27 @@ This is a simple single page application website that loads the allowed routes d
 
 ### Rich Text component
 
-type: "rich-text"
-textType: "plain" | "html"
-text: this field will contain either plain text or escaped HTML. It is rendered according to the textType property.
+type: "rich-text"<br>
+textType: "plain" | "html"<br>
+text: this field will contain either plain text or escaped HTML. It is rendered according to the textType property.<br>
 style: "uppercase". If this is set, then the value will be passed through to the text-transform CSS property on the container.
 
 ### Container component
 
-This component will be rendered as a flex container ( display: flex ), and will default to the same default values as a flex.
-type: "container"
-items: [] - this will be an array of other components, which could include another container component.
-flexDirection: value provided should be passed to the flex-direction css property on the container
-flexWrap: value provided should be passed to the flex-wrap css property on the container
-justifyContent: value provided should be passed to the justify-content css property on the container
-alignItems: value provided should be passed to the align-items css property on the container
+This component will be rendered as a flex container ( display: flex ), and will default to the same default values as a flex.<br>
+type: "container"<br>
+items: [] - this will be an array of other components, which could include another container component.<br>
+flexDirection: value provided should be passed to the flex-direction css property on the container<br>
+flexWrap: value provided should be passed to the flex-wrap css property on the container<br>
+justifyContent: value provided should be passed to the justify-content css property on the container<br>
+alignItems: value provided should be passed to the align-items css property on the container<br>
 width: relative width to parent container (e.g. 0.3 would be 30% the width of its parent)
 
 ### Image component
 
-If the image cannot be loaded, then a 100x100 placeholder from placeholder.com will be displayed.
-Images are set align-self: center; to avoid scaling in flex containers.
-type: "image"
-alt: "string" - alternative text
-height: if provided, it should be set as the max-height for the image element
+If the image cannot be loaded, then a 100x100 placeholder from placeholder.com will be displayed.<br>
+Images are set align-self: center; to avoid scaling in flex containers.<br>
+type: "image"<br>
+alt: "string" - alternative text<br>
+height: if provided, it should be set as the max-height for the image element<br>
 src: string value which provides the URL that should be displayed as an image
